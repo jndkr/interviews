@@ -111,11 +111,12 @@
 * Not thread safe
 * Allows null for both key and value
 
-#### Linked Hash Map
-* 
+### Linked Hash Map
+
+
 ### Hash Set
 
-#### Collisions
+### Collisions
 * Happen when the hash function generates the same index for more than one key
 * **Collision Resolution:**
   * Separate Chaining
@@ -206,7 +207,6 @@
 ## Bit Manipulation
 
 ## Etc
+
 -------------------------------------------------------------------
 > Data structure defintions from Wikipedia, time complexities from http://bigocheatsheet.com/
-
-
