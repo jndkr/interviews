@@ -1,4 +1,9 @@
 # interviews
+
+-------------------------------------------------------------------
+# WIP 
+-------------------------------------------------------------------
+
 ## Data Structures
 ### Arrays
 * *Array* -- Collection of elements identified by index
@@ -88,14 +93,51 @@
   * Insert: `O(log(n))`
   * Remove: `O(log(n))`
 
--------------------------------------------------------------------
-# WIP 
+### Hash Table
+* *Hash Table* -- organizes data using hash functions to support quick insertion and search
+* Synchronized
+* Thread safe
+* Does not allow null values
+* Time Complexity:
+  * Access: `N/A`
+  * Search: `O(1)`
+  * Insert: `O(1)`
+  * Remove: `O(1)`
+
+### Hash Map
+* *Hash Map* -- structure that can map keys to values
+* Uses a hash function to compute an index into an array of buckets/slots from which the desired value can be found
+* Not synchronized
+* Not thread safe
+* Allows null for both key and value
+
+#### Linked Hash Map
+* 
+### Hash Set
+
+#### Collisions
+* Happen when the hash function generates the same index for more than one key
+* **Collision Resolution:**
+  * Separate Chaining
+    * Each bucket is independent and has some sort of list of entries with the same index
+    * The time for hash table operations = the time to find the bucket (**constant**) + time for list operation
+  * Open Addressing
+    * All entry records are stored in the bucket array itself
+    * When a new entry has to be inserted, buckets are examined starting with the hashed-to slot and proceeding in a probe sequence until an unoccupied slot is found
+    * "Open Addressing" refers to the fact that the location ("address") of the item is *not* determined by its hash value
+
 ### Trees
-* **Binary Tree:**
-* **N-Ary Tree:**
+* *Tree* -- undirected, connected, acyclic graph
+* **Binary Tree:** A tree data structure in which each node has at *most* two children
+  * *Full Binary Tree:* Every node has either 0 or 2 children
+  * *Perfect Binary Tree:* All interior nodes have 2 children and all leaves have the same depth
+  * *Complete Binary Tree:* Every level (except maybe the last) is completely filled and all nodes in the last level are as far left as possible
+  * *Balanced Binary Tree:* Has the minimum possible depth for leaf nodes
+* **N-Ary Tree:** A rooted tree in which each node has no more than *N* children
+  * https://leetcode.com/articles/introduction-to-n-ary-trees/
 
 #### Binary Search Tree
-* *Binary Search Tree* --
+* *Binary Search Tree* -- type of binary tree which maintains the property that the left subtree of a node contains only nodes with keys lesser than or equal to the node's key and the right subtree of a node contains only nodes with keys greater than the node's key
 * Time Complexity:
   * Access: `O(log(n))`
   * Search: `O(log(n))`
@@ -103,7 +145,12 @@
   * Remove: `O(log(n))`
 
 #### Red Black Tree
-* *Red Black Tree* --
+* *Red Black Tree* -- self-balancing BST where each node has an extra bit representing the color of the node (red or black). The colors are used to ensure the tree remains balanced during insertions and deletions
+* Root and leaves are generally black
+* If a node is red, then both its children are black
+* The path from the root to the farthest leaf is no more than twice as long as the path from the root to the nearest leaf
+* Shortest possible path has all black nodes
+* Longest possible path alternates between red and black nodes
 * Time Complexity:
   * Access: `O(log(n))`
   * Search: `O(log(n))`
@@ -111,29 +158,22 @@
   * Remove: `O(log(n))`
 
 #### AVL Tree
-* *AVL Tree* --
+* *AVL Tree* -- self-balancing BST where the heights of the two child subtrees of any node differ by at most one
+* For lookup-intensive applications, faster than Red Black trees because they are more strictly balanced  
 * Time Complexity:
   * Access: `O(log(n))`
   * Search: `O(log(n))`
   * Insert: `O(log(n))`
   * Remove: `O(log(n))`
 
-
-### Hash Table
-* *Hash Table* --
-* Time Complexity:
-  * Access: `N/A`
-  * Search: `O(1)`
-  * Insert: `O(1)`
-  * Remove: `O(1)`
-
-#### Collisions
-
-
 ### Trie
-
-### Hash Map
-#### Linked Hash Map
+* *Trie* -- A kind of search tree used to store a dynamic set of associative array where the keys are usually strings
+  * Also called *radix tree* or *prefix tree*
+* No node in the tree stores the key associated with that node
+  * Instead the position in the tree defines the key with which it is associated
+* All descendants of a node have a common prefix of the string associated with that node
+* Root is associated with the empty string
+* Keys are not necessarily associated with every node
 
 ### Graphs
 #### Undirected
@@ -168,4 +208,5 @@
 ## Etc
 -------------------------------------------------------------------
 > Data structure defintions from Wikipedia, time complexities from http://bigocheatsheet.com/
+
 
