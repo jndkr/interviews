@@ -110,13 +110,19 @@
 * Not synchronized
 * Not thread safe
 * Allows null for both key and value
+* Example: {1 -> "a", 2 -> "b", 3 -> "c", 4 -> "d"}
 
 ### Linked Hash Map
-
+* *Linked Hash Map* -- just like HashMap but maintains the order of the elements inserted into it
+  * Elements can be accessed in insertion order
+* Implements Map Interface and extends HashMap class
 
 ### Hash Set
+* *Hash Set* -- structure to store distinct elements
+* Implements Set Interface
+* Example: {"a", "b", "c", "d"}
 
-### Collisions
+#### Collisions
 * Happen when the hash function generates the same index for more than one key
 * **Collision Resolution:**
   * Separate Chaining
@@ -177,29 +183,93 @@
 * Keys are not necessarily associated with every node
 
 ### Graphs
-#### Undirected
-#### Directed
-#### Weighted
+* *Graph* -- non-linear data structure consisting of a pair of sets (V, E), where V is the set of vertices and E is the set of edges connecting the pairs of vertices
+* **Undirected Graph:** Edges don't have a specific direction (two-way)
+* **Directed Graph:** Edges have a specific direction
+* **Weighted Graph:** Edges have an associated value, or *weight*
+  * Weight of edge also called "cost" of the edge\
 
 ## Algorithms
-
-### Sorting
+### Sorting 
 #### Quick Sort
+* Divide and Conquer algorithm
+* Picks element as pivot and partitions given array around the picked pivot
+* Time Complexity:
+  * Best: `O(n log(n))`
+  * Average: `O(n log(n))`
+  * Worst: `O(n^2)`
+* Space Complexity: `O(log(n))`
+
 #### Merge Sort
+* Divide and Conquer algorithm
+* Divides array in 2 halves, sorts the two halves recursively and then merges the results
+* Time Complexity:
+  * Best: `O(n log(n))`
+  * Average: `O(n log(n))`
+  * Worst: `O(n log(n))`
+* Space Complexity: `O(n)`
+
+#### Heap Sort
+* Repeatedly find maximum element and place it at the end
+* Time Complexity:
+  * Best: `O(n log(n))`
+  * Average: `O(n log(n))`
+  * Worst: `O(n log(n))`
+
+#### Insertion Sort
+* Loop over array (from beginning) and repeatedly compare next element with current sub-array and inserting new element in correct position
+* Time Complexity:
+  * Best: `O(n)`
+  * Average: `O(n^2)`
+  * Worst: `O(n^2)`
+    
 #### Bucket Sort
+* Distributes elements of an array into buckets and then sort each bucket individually, then put all elements back together 
+* Time Complexity:
+  * Best: `O(n + k)`
+  * Average: `O(n + k)`
+  * Worst: `O(n^2)`
+
 #### Radix Sort
+* Sorts integers by grouping by individual digits of integers which share the same significant position and value
+* Time Complexity:
+  * Best: `O(nk)`
+  * Average: `O(nk)`
+  * Worst: `O(nk)`
 
-
-### Tree Traversals
-#### DFS
-##### Recursive
-##### Iterative
-#### In-Order
-#### Pre-Order
-#### Post-Order
+#### Bubble Sort
+* Repeatedly compares adjacent elements and places in correct order
+* Time Complexity:
+  * Best: `O(n)`
+  * Average: `O(n^2)`
+  * Worst: `O(n^2)`
 
 ### Traversals
-#### Dijkstra
+#### DFS
+* Traverse tree or graph starting at root node (or arbitrary graph node) and traverse as far as possible along each branch before traversing back up 
+* Use boolean visited array with graphs
+
+#### In-Order
+  1. Traverse the left subtree, i.e., Inorder(left-subtree)
+  2. Visit the root.
+  3. Traverse the right subtree, i.e., Inorder(right-subtree)
+
+#### Pre-Order
+  1. Visit the root.
+  2. Traverse the left subtree, i.e., Preorder(left-subtree)
+  3. Traverse the right subtree, i.e., Preorder(right-subtree) 
+
+#### Post-Order
+  1. Traverse the left subtree, i.e., Postorder(left-subtree)
+  2. Traverse the right subtree, i.e., Postorder(right-subtree)
+  3. Visit the root.
+
+#### BFS
+* Traverse tree starting at root and visit all neighbor nodes at the same depth before moving onto next depth level
+* Use boolean visited array with graphs
+
+### Dijkstra
+* Find shortest path between nodes in a graph
 
 ## Dynamic Programming
 ### Backtracking
@@ -207,6 +277,19 @@
 ## Bit Manipulation
 
 ## Etc
+* Clarifying questions:
+  * How big is the size of the input?
+  * How big is the range of values?
+  * What kind of values are there? Are there negative numbers? Floating points? Will there be empty inputs?
+  * Are there duplicates within the input?
+  * What are some extreme cases of the input?
+  * How is the input stored? If you are given a dictionary of words, is it a list of strings or a trie?
+
+
+* https://github.com/yangshun/tech-interview-handbook
+* https://github.com/Twipped/InterviewThis
+* https://www.quora.com/Google-Interview-Questions/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role
+
 
 -------------------------------------------------------------------
 > Data structure defintions from Wikipedia, time complexities from http://bigocheatsheet.com/
