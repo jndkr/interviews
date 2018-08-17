@@ -1,8 +1,9 @@
 # interviews
 
--------------------------------------------------------------------
-# WIP 
--------------------------------------------------------------------
+--------
+WIP
+--------
+
 
 ## Data Structures
 ### Arrays
@@ -190,7 +191,7 @@
   * Weight of edge also called "cost" of the edge\
 
 ## Algorithms
-### Sorting 
+### Sorting
 #### Quick Sort
 * Divide and Conquer algorithm
 * Picks element as pivot and partitions given array around the picked pivot
@@ -222,9 +223,9 @@
   * Best: `O(n)`
   * Average: `O(n^2)`
   * Worst: `O(n^2)`
-    
+
 #### Bucket Sort
-* Distributes elements of an array into buckets and then sort each bucket individually, then put all elements back together 
+* Distributes elements of an array into buckets and then sort each bucket individually, then put all elements back together
 * Time Complexity:
   * Best: `O(n + k)`
   * Average: `O(n + k)`
@@ -246,7 +247,7 @@
 
 ### Traversals
 #### DFS
-* Traverse tree or graph starting at root node (or arbitrary graph node) and traverse as far as possible along each branch before traversing back up 
+* Traverse tree or graph starting at root node (or arbitrary graph node) and traverse as far as possible along each branch before traversing back up
 * Use boolean visited array with graphs
 
 #### In-Order
@@ -257,7 +258,7 @@
 #### Pre-Order
   1. Visit the root.
   2. Traverse the left subtree, i.e., Preorder(left-subtree)
-  3. Traverse the right subtree, i.e., Preorder(right-subtree) 
+  3. Traverse the right subtree, i.e., Preorder(right-subtree)
 
 #### Post-Order
   1. Traverse the left subtree, i.e., Postorder(left-subtree)
@@ -276,6 +277,12 @@
 
 ## Bit Manipulation
 
+## Common Patterns in LeetCode problems
+* https://medium.com/leetcode-patterns
+### Sliding Window
+* https://discuss.leetcode.com/topic/68976/sliding-window-algorithm-template-to-solve-all-the-leetcode-substring-search-problem
+* 
+
 ## Etc
 * Clarifying questions:
   * How big is the size of the input?
@@ -284,11 +291,18 @@
   * Are there duplicates within the input?
   * What are some extreme cases of the input?
   * How is the input stored? If you are given a dictionary of words, is it a list of strings or a trie?
+* What if input is too big to fit in memory?
+  * Break the data into chunks and process each chunk at a time to reduce the number of disk accesses
+  * Looking for a distributed solution
+  
 
-
+* https://medium.com/leetcode-patterns
 * https://github.com/yangshun/tech-interview-handbook
 * https://github.com/Twipped/InterviewThis
+* https://github.com/donbeave/interview 
+* https://www.reddit.com/r/cscareerquestions/comments/1jov24/heres_how_to_prepare_for_tech_interviews/
 * https://www.quora.com/Google-Interview-Questions/How-should-I-prepare-for-my-Google-interview-if-I-have-1-month-left-and-I%E2%80%99m-applying-for-a-software-engineer-role
+* https://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/ 
 
 
 -------------------------------------------------------------------
